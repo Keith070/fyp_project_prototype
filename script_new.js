@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Clear session data
         sessionStorage.clear();
         // Redirect to login
-        window.location.href = 'index(1).html';
+        window.location.href = 'index.html';
     };
 
     // ==================== DASHBOARD PAGE ====================
