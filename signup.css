@@ -1,0 +1,255 @@
+/* Irish Theme Variables */
+:root {
+  --green: #169b62;
+  --green-dark: #0d7e4a;
+  --green-light: #e0f5ec;
+  --orange: #ff883e;
+  --white: #ffffff;
+  --off-white: #f8f9fa;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --error: #d62828;
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--off-white);
+  color: var(--gray-dark);
+  line-height: 1.6;
+  background-image: url('https://www.ireland.com/wp-content/uploads/2021/05/irish-landscape-1-1024x683.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+  background-color: rgba(255, 255, 255, 0.9);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.header h1 {
+  color: var(--green);
+  font-weight: 700;
+  margin-top: 0.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.flag-icon {
+  width: 60px;
+  height: 30px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 1.75rem;
+  color: var(--green);
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.subtitle {
+  color: var(--gray);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.input-field {
+  position: relative;
+  margin-bottom: 1.25rem;
+}
+
+.input-field i {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gray);
+}
+
+.input-field input {
+  width: 100%;
+  padding: 0.85rem 1rem 0.85rem 2.5rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  background-color: var(--off-white);
+}
+
+.input-field input:focus {
+  border-color: var(--green);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(22, 155, 98, 0.2);
+  background-color: var(--white);
+}
+
+.password-strength {
+  height: 3px;
+  background: #ddd;
+  margin-top: 0.5rem;
+  border-radius: 3px;
+  position: relative;
+}
+
+.password-strength::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0%;
+  background: var(--error);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.input-field input[type="password"]:focus ~ .password-strength::before {
+  background: var(--orange);
+  width: 50%;
+}
+
+.input-field input[type="password"]:valid ~ .password-strength::before {
+  background: var(--green);
+  width: 100%;
+}
+
+#errorMessage {
+  background-color: rgba(214, 40, 40, 0.1);
+  color: var(--error);
+  padding: 0.75rem;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid var(--error);
+  font-size: 0.9rem;
+  display: none;
+}
+
+.terms {
+  display: flex;
+  align-items: flex-start;
+  margin: 1.5rem 0;
+  font-size: 0.85rem;
+}
+
+.terms input {
+  margin-right: 0.75rem;
+  margin-top: 0.2rem;
+}
+
+.terms a {
+  color: var(--green);
+  text-decoration: none;
+}
+
+.terms a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  width: 100%;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--green);
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn:hover {
+  background-color: var(--green-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--gray);
+}
+
+.login-link a {
+  color: var(--green);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem 0;
+  color: var(--gray);
+  font-size: 0.8rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.footer-links a {
+  color: var(--gray);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--green);
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+  .card {
+      padding: 1.5rem;
+  }
+  
+  .title {
+      font-size: 1.5rem;
+  }
+}

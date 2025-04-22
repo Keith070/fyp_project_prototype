@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cast Your Vote - Blockchain Voting System</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles_new.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-vote-yea"></i>
+                <h1>E-Vótáil</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="dashboard_new.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="vote_new.html" class="active"><i class="fas fa-vote-yea"></i> Vote</a></li>
+                    <li><a href="results_new.html"><i class="fas fa-chart-bar"></i> Results</a></li>
+                    <li><a href="security_new.html"><i class="fas fa-shield-alt"></i> Security</a></li>
+                    <li><a href="faq_new.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                </ul>
+            </nav>
+            <button class="logout-btn" onclick="logout()">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="vote-container">
+            <div class="vote-header">
+                <h2><i class="fas fa-check-circle"></i> 2025 General Election</h2>
+                <div class="election-timer">
+                    <i class="fas fa-clock"></i> 
+                    <span>Time remaining: 2 days 4 hours</span>
+                </div>
+            </div>
+
+            <div class="voting-card">
+                <h3>Select Your Candidate</h3>
+                <p class="instruction">Please carefully review each candidate before making your selection.</p>
+                
+                <form id="voteForm" class="candidate-selection">
+                    <div class="candidate-option">
+                        <input type="radio" name="candidate" id="candidateA" value="Candidate A">
+                        <label for="candidateA">
+                            <div class="candidate-card">
+                                <div class="candidate-image" style="background-image: url('politician\(5\).jpg');"></div>
+                                <div class="candidate-info">
+                                    <h4>Jerry Hutch</h4>
+                                    <p class="party">Green Party</p>
+                                    <p class="bio">Environmental activist with 10 years of local government experience.</p>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="candidate-option">
+                        <input type="radio" name="candidate" id="candidateB" value="Candidate B">
+                        <label for="candidateB">
+                            <div class="candidate-card">
+                                <div class="candidate-image" style="background-image: url('politician\(4\).jpg');"></div>
+                                <div class="candidate-info">
+                                    <h4>Jimmy Sloyan</h4>
+                                    <p class="party">Fine Gael</p>
+                                    <p class="bio">Business leader focused on economic growth and job creation.</p>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="candidate-option">
+                        <input type="radio" name="candidate" id="candidateC" value="Candidate C">
+                        <label for="candidateC">
+                            <div class="candidate-card">
+                                <div class="candidate-image" style="background-image: url('politician\(3\).jpg');"></div>
+                                <div class="candidate-info">
+                                    <h4>Enoch Burke</h4>
+                                    <p class="party">Sinn Féin</p>
+                                    <p class="bio">Community organizer advocating for healthcare and education reform.</p>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+                    
+                    
+
+                    
+
+                    <div class="vote-confirm">
+                        <button type="submit" class="submit-vote-btn">
+                            <i class="fas fa-lock"></i> Submit Secure Vote
+                        </button>
+                        <p class="security-note">
+                            <i class="fas fa-shield-alt"></i> Your vote is encrypted and recorded on the blockchain
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <i class="fas fa-vote-yea"></i>
+                <span>E-Vótáil</span>
+            </div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2025 Blockchain Voting System. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script_new.js"></script>
+</body>
+</html>

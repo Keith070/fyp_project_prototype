@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security - Blockchain Voting System</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles_new.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-vote-yea"></i>
+                <h1>E-Vótáil</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="dashboard_new.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="vote_new.html"><i class="fas fa-vote-yea"></i> Vote</a></li>
+                    <li><a href="results_new.html"><i class="fas fa-chart-bar"></i> Results</a></li>
+                    <li><a href="security_new.html" class="active"><i class="fas fa-shield-alt"></i> Security</a></li>
+                    <li><a href="faq_new.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                </ul>
+            </nav>
+            <button class="logout-btn" onclick="logout()">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="security-container">
+            <div class="security-hero">
+                <h2><i class="fas fa-shield-alt"></i> Security & Transparency</h2>
+                <p>Our blockchain-based voting system ensures the highest standards of security, privacy, and verifiability.</p>
+            </div>
+
+            <div class="security-features">
+                <div class="feature-card">
+                    <div class="feature-icon" style="background-color: #169B62;">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>End-to-End Encryption</h3>
+                    <p>All votes are encrypted from the moment they're cast until they're recorded on the blockchain, ensuring complete privacy.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon" style="background-color: #4361EE;">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <h3>Immutable Blockchain</h3>
+                    <p>Once recorded on the blockchain, votes cannot be altered or deleted, creating a permanent, tamper-proof record.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon" style="background-color: #FF6F00;">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3>Voter Anonymity</h3>
+                    <p>Your identity is never linked to your vote, while still allowing you to verify your vote was counted correctly.</p>
+                </div>
+            </div>
+
+            <div class="security-details">
+                <div class="details-card">
+                    <h3><i class="fas fa-fingerprint"></i> How We Protect Your Vote</h3>
+                    <div class="tech-stack">
+                        <div class="tech-item">
+                            <h4>Blockchain Technology</h4>
+                            <p>Using Hyperledger Fabric, we create a decentralized, transparent voting record that's verified by multiple independent nodes.</p>
+                        </div>
+                        <div class="tech-item">
+                            <h4>Zero-Knowledge Proofs</h4>
+                            <p>Advanced cryptography allows verification of votes without revealing voter identity or candidate selection.</p>
+                        </div>
+                        <div class="tech-item">
+                            <h4>Multi-Factor Authentication</h4>
+                            <p>Voters must authenticate through multiple secure methods before gaining access to the voting system.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="details-card">
+                    <h3><i class="fas fa-search"></i> Audit & Verification</h3>
+                    <div class="audit-features">
+                        <div class="audit-item">
+                            <i class="fas fa-qrcode"></i>
+                            <p>Each voter receives a unique QR code to verify their vote was recorded correctly.</p>
+                        </div>
+                        <div class="audit-item">
+                            <i class="fas fa-network-wired"></i>
+                            <p>Independent observers can monitor the blockchain in real-time during the election.</p>
+                        </div>
+                        <div class="audit-item">
+                            <i class="fas fa-file-alt"></i>
+                            <p>Complete cryptographic audit trails are available for post-election verification.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="security-video">
+                <h3><i class="fas fa-play-circle"></i> How Blockchain Voting Works</h3>
+                <div class="video-container">
+                    <iframe 
+                        width="560" 
+                        height="315" 
+                        src="https://www.youtube.com/embed/jZYNswYbIvk?si=1imll2pwYdxsPwGf" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <i class="fas fa-vote-yea"></i>
+                <span>E-Vótáil</span>
+            </div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2025 Blockchain Voting System. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script_new.js"></script>
+</body>
+</html>

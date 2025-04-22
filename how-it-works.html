@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works - E-Vótáil Blockchain Voting</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles_new.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-vote-yea"></i>
+                <h1>E-Vótáil</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="dashboard_new.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="faq_index.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                    <li><a href="how-it-works.html" class="active"><i class="fas fa-cogs"></i> How It Works</a></li>
+                </ul>
+            </nav>
+            <button class="logout-btn" onclick="logout()">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="how-it-works-container">
+            <section class="hero-section">
+                <h2><i class="fas fa-cogs"></i> How Blockchain Voting Works</h2>
+                <p class="subtitle">A transparent, secure, and verifiable voting process</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/example" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </section>
+
+            <section class="steps-section">
+                <h3><i class="fas fa-list-ol"></i> The Voting Process</h3>
+                <div class="process-steps">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Voter Authentication</h4>
+                            <p>Verify your identity using secure government-issued credentials through our multi-factor authentication system.</p>
+                            <div class="step-icon">
+                                <i class="fas fa-fingerprint"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Ballot Access</h4>
+                            <p>Receive your unique, encrypted ballot tailored to your electoral district and eligible races.</p>
+                            <div class="step-icon">
+                                <i class="fas fa-envelope-open-text"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Make Your Selection</h4>
+                            <p>Review candidate information and select your choices on the digital ballot.</p>
+                            <div class="step-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Encrypt & Submit</h4>
+                            <p>Your selections are encrypted and submitted to the blockchain network for verification.</p>
+                            <div class="step-icon">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h4>Blockchain Verification</h4>
+                            <p>Network nodes verify and record your vote as an immutable transaction on the blockchain.</p>
+                            <div class="step-icon">
+                                <i class="fas fa-link"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">6</div>
+                        <div class="step-content">
+                            <h4>Receipt Generation</h4>
+                            <p>Receive a unique verification code to confirm your vote was recorded without revealing your selection.</p>
+                            <div class="step-icon">
+                                <i class="fas fa-receipt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="tech-section">
+                <h3><i class="fas fa-microchip"></i> The Technology Behind E-Vótáil</h3>
+                <div class="tech-cards">
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h4>Hyperledger Fabric</h4>
+                        <p>Enterprise-grade blockchain framework providing modular architecture for voting transactions.</p>
+                    </div>
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Zero-Knowledge Proofs</h4>
+                        <p>Advanced cryptography that verifies votes without revealing voter identity or selections.</p>
+                    </div>
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <i class="fas fa-user-lock"></i>
+                        </div>
+                        <h4>Multi-Factor Authentication</h4>
+                        <p>Combination of PPSN, mobile verification, and biometrics for secure access.</p>
+                    </div>
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <i class="fas fa-qrcode"></i>
+                        </div>
+                        <h4>Verifiable Audit Trail</h4>
+                        <p>Each voter receives a unique QR code to confirm their vote was counted in the final tally.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="comparison-section">
+                <h3><i class="fas fa-balance-scale"></i> Traditional vs. Blockchain Voting</h3>
+                
+                <div class="comparison-table-container">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Traditional Voting</th>
+                                <th>E-Vótáil</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Verification</td>
+                                <td>Limited audit capability</td>
+                                <td class="highlight">Fully verifiable by voters</td>
+                            </tr>
+                            <tr>
+                                <td>Accessibility</td>
+                                <td>Physical polling places</td>
+                                <td class="highlight">Vote from any device</td>
+                            </tr>
+                            <tr>
+                                <td>Speed</td>
+                                <td>Days to count</td>
+                                <td class="highlight">Instant results</td>
+                            </tr>
+                            <tr>
+                                <td>Security</td>
+                                <td>Physical ballot security</td>
+                                <td class="highlight">Cryptographic protection</td>
+                            </tr>
+                            <tr>
+                                <td>Cost</td>
+                                <td>High (staff, materials)</td>
+                                <td class="highlight">Low (digital infrastructure)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <i class="fas fa-vote-yea"></i>
+                <span>E-Vótáil</span>
+            </div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2025 E-Vótáil Blockchain Voting System. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script_new.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Blockchain Voting System</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles_new.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-vote-yea"></i>
+                <h1>E-Vótáil</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="dashboard_new.html" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="vote_new.html"><i class="fas fa-vote-yea"></i> Vote</a></li>
+                    <li><a href="results_new.html"><i class="fas fa-chart-bar"></i> Results</a></li>
+                    <li><a href="security_new.html"><i class="fas fa-shield-alt"></i> Security</a></li>
+                    <li><a href="faq_new.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                </ul>
+            </nav>
+            <button class="logout-btn" onclick="logout()">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="dashboard-container">
+            <section class="welcome-section">
+                <h2>Welcome to the Blockchain Voting System</h2>
+                <p>Secure, transparent elections powered by blockchain technology</p>
+            </section>
+
+            <div class="dashboard-grid">
+                <div class="dashboard-card quick-vote">
+                    <h3><i class="fas fa-rocket"></i> Quick Vote</h3>
+                    <p>Cast your vote in the current election</p>
+                    <a href="vote_new.html" class="card-btn">Vote Now</a>
+                </div>
+
+                <div class="dashboard-card election-status">
+                    <h3><i class="fas fa-calendar-check"></i> Election Status</h3>
+                    <div class="status-indicator active">Active</div>
+                    <p>Time remaining: 2 days 4 hours</p>
+                </div>
+
+                <div class="dashboard-card recent-results">
+                    <h3><i class="fas fa-chart-pie"></i> Preliminary Results</h3>
+                    <div class="mini-results-chart">
+                        <div class="result-bar" style="--width: 45%; --color: #169B62;">
+                            <span>Candidate A: 45%</span>
+                        </div>
+                        <div class="result-bar" style="--width: 35%; --color: #FF6F00;">
+                            <span>Candidate B: 35%</span>
+                        </div>
+                        <div class="result-bar" style="--width: 20%; --color: #4361EE;">
+                            <span>Candidate C: 20%</span>
+                        </div>
+                    </div>
+                    <a href="results_new.html" class="card-link">View Full Results</a>
+                </div>
+
+                <div class="dashboard-card how-to-vote">
+                    <h3><i class="fas fa-info-circle"></i> How to Vote</h3>
+                    <ol class="steps-list">
+                        <li>Log in to your voting account</li>
+                        <li>Select the election you want to vote in</li>
+                        <li>Review the candidates</li>
+                        <li>Select your preferred candidate</li>
+                        <li>Confirm your selection</li>
+                    </ol>
+                    <a href="faq_new.html" class="card-link">More Information</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <i class="fas fa-vote-yea"></i>
+                <span>E-Vótáil</span>
+            </div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2025 Blockchain Voting System. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script_new.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IrishVote | Sign Up</title>
+    <link rel="stylesheet" href="signup.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Flag_of_Ireland.svg" alt="Irish Flag" class="flag-icon">
+            <h1>E-Vótáil</h1>
+        </div>
+        
+        <div class="card">
+            <div class="signin-signup">
+                <form id="signupForm">
+                    <h2 class="title">Create Your Voting Account</h2>
+                    <p class="subtitle">Register to participate in Ireland's democratic process</p>
+                    
+                    <div id="errorMessage"></div>
+                    
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="name" placeholder="Full Name" required />
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-id-card"></i>
+                        <input type="text" id="ppsNumber" placeholder="PPS Number" required />
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" placeholder="Email Address" required />
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" placeholder="Create Password" required />
+                        <div class="password-strength"></div>
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="confirmPassword" placeholder="Confirm Password" required />
+                    </div>
+                    
+                    <div class="terms">
+                        <input type="checkbox" id="terms" required />
+                        <label for="terms">I agree to the <a href="#">Terms of Service</a> and confirm I am an Irish citizen eligible to vote</label>
+                    </div>
+                    
+                    <button type="submit" class="btn solid">
+                        <i class="fas fa-check-circle"></i> Register to Vote
+                    </button>
+                    
+                    <div class="login-link">
+                        Already registered? <a href="login_form.html">Sign in to your account</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2025 E-Vótáil - Secure Online Voting System</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Accessibility</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="signup.js"></script>
+</body>
+</html>

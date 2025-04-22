@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Election Results - Blockchain Voting System</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles_new.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-vote-yea"></i>
+                <h1>E-Vótáil</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="dashboard_new.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="vote_new.html"><i class="fas fa-vote-yea"></i> Vote</a></li>
+                    <li><a href="results_new.html" class="active"><i class="fas fa-chart-bar"></i> Results</a></li>
+                    <li><a href="security_new.html"><i class="fas fa-shield-alt"></i> Security</a></li>
+                    <li><a href="faq_new.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                </ul>
+            </nav>
+            <button class="logout-btn" onclick="logout()">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="results-container">
+            <div class="results-header">
+                <h2><i class="fas fa-chart-pie"></i> 2025 General Election Results</h2>
+                <div class="results-status">
+                    <span class="status-badge live">LIVE</span>
+                    <span class="update-time">Last updated: <span id="updateTimestamp">Just now</span></span>
+                </div>
+            </div>
+
+            <div class="results-summary">
+                <div class="summary-card">
+                    <h3>Total Votes Cast</h3>
+                    <div class="summary-value">1,245,678</div>
+                </div>
+                <div class="summary-card">
+                    <h3>Voter Turnout</h3>
+                    <div class="summary-value">68.5%</div>
+                </div>
+                <div class="summary-card">
+                    <h3>Counting Complete</h3>
+                    <div class="summary-value">42/42 Constituencies</div>
+                </div>
+            </div>
+
+            <div class="results-visualization">
+                <h3>National Results Breakdown</h3>
+                <div class="results-bars">
+                    <div class="result-row">
+                        <div class="candidate-info">
+                            <div class="candidate-color" style="background-color: #169B62;"></div>
+                            <span>Jerry Hutch (Green Party)</span>
+                        </div>
+                        <div class="result-bar-container">
+                            <div class="result-bar" style="width: 45%; background-color: #169B62;">
+                                <span>45% (560,555 votes)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result-row">
+                        <div class="candidate-info">
+                            <div class="candidate-color" style="background-color: #4361EE;"></div>
+                            <span>Jimmy Sloyan (Fine Gael)</span>
+                        </div>
+                        <div class="result-bar-container">
+                            <div class="result-bar" style="width: 35%; background-color: #4361EE;">
+                                <span>35% (436,000 votes)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result-row">
+                        <div class="candidate-info">
+                            <div class="candidate-color" style="background-color: #FF6F00;"></div>
+                            <span>Enoch Burke (Sinn Féin)</span>
+                        </div>
+                        <div class="result-bar-container">
+                            <div class="result-bar" style="width: 20%; background-color: #FF6F00;">
+                                <span>20% (249,123 votes)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="constituency-results">
+                <h3>Constituency Results</h3>
+                <div class="constituency-selector">
+                    <select id="constituencySelect">
+                        <option value="">Select a constituency</option>
+                        <option value="dublin-central">Dublin Central</option>
+                        <option value="cork-north-west">Cork North-West</option>
+                        <option value="galway-east">Galway East</option>
+                    </select>
+                </div>
+                <div class="constituency-details" id="constituencyDetails">
+                    <p>Select a constituency to view detailed results</p>
+                </div>
+            </div>
+
+            <div class="results-verify">
+                <h3><i class="fas fa-check-double"></i> Verify Your Vote</h3>
+                <p>Enter your voter ID to confirm your vote was recorded correctly on the blockchain</p>
+                <div class="verify-form">
+                    <input type="text" placeholder="Enter your Voter ID">
+                    <button class="verify-btn">Verify</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <i class="fas fa-vote-yea"></i>
+                <span>E-Vótáil</span>
+            </div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2025 Blockchain Voting System. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script_new.js"></script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Blockchain Voting System</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles_new.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-vote-yea"></i>
+                <h1>E-Vótáil</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="dashboard_new.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="faq_index.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                    <li><a href="how-it-works.html" class="active"><i class="fas fa-cogs"></i> How It Works</a></li>
+                </ul>
+            </nav>
+            <button class="logout-btn" onclick="logout()">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="faq-container">
+            <div class="faq-header">
+                <h2><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+                <p>Find answers to common questions about blockchain voting</p>
+            </div>
+
+            <div class="search-faq">
+                <input type="text" placeholder="Search FAQs...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="faq-categories">
+                <button class="category-btn active">All Questions</button>
+                <button class="category-btn">Voting Process</button>
+                <button class="category-btn">Security</button>
+                <button class="category-btn">Technical</button>
+            </div>
+
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What is blockchain-based voting?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Blockchain-based voting is a digital voting system that uses blockchain technology to ensure transparency, security, and immutability of votes. Each vote is recorded as a transaction on a decentralized ledger, preventing tampering and providing a verifiable audit trail while maintaining voter privacy.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How does blockchain ensure my vote is secure?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Blockchain secures votes through several mechanisms:</p>
+                        <ul>
+                            <li><strong>Encryption:</strong> Votes are encrypted end-to-end</li>
+                            <li><strong>Decentralization:</strong> No single point of failure</li>
+                            <li><strong>Consensus mechanisms:</strong> Multiple nodes must verify transactions</li>
+                            <li><strong>Immutability:</strong> Once recorded, votes cannot be altered</li>
+                            <li><strong>Transparency:</strong> All transactions are publicly verifiable</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Can my vote be traced back to me?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No, the system uses advanced cryptographic techniques to ensure voter anonymity. While your authentication is required to cast a vote, your identity is never linked to your ballot choice on the blockchain. You receive a unique verification code to confirm your vote was recorded without revealing how you voted.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What happens if I lose internet connection while voting?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>If your connection is interrupted before you submit your vote, you'll need to restart the voting process when you regain connectivity. If your vote was successfully submitted before the interruption, it will be permanently recorded on the blockchain and you'll receive your verification code.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How do I know my vote was counted correctly?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>After voting, you'll receive a unique transaction ID (in the form of a QR code) that allows you to:</p>
+                        <ol>
+                            <li>Verify your vote was recorded on the blockchain</li>
+                            <li>Confirm it hasn't been altered</li>
+                            <li>Check that it was included in the final tally</li>
+                        </ol>
+                        <p>All without revealing your voting choice to anyone.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Can I change my vote after submitting it?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No, once a vote is recorded on the blockchain, it cannot be changed or deleted. This is a fundamental security feature that prevents tampering. Please review your selection carefully before submitting.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What devices can I use to vote?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You can vote using any modern web browser on:</p>
+                        <ul>
+                            <li>Windows, Mac, or Linux computers</li>
+                            <li>iOS and Android smartphones/tablets</li>
+                            <li>Public library or community center computers</li>
+                        </ul>
+                        <p>We recommend using the most up-to-date version of Chrome, Firefox, Safari, or Edge.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-contact">
+                <h3>Still have questions?</h3>
+                <p>Our support team is ready to help you with any additional questions about the voting process.</p>
+                <button class="contact-btn">
+                    <i class="fas fa-envelope"></i> Contact Support
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <i class="fas fa-vote-yea"></i>
+                <span>E-Vótáil</span>
+            </div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2025 Blockchain Voting System. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script_new.js"></script>
+</body>
+</html>
