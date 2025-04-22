@@ -27,8 +27,6 @@ document.addEventListener('DOMContentLoaded', function () {
   
       // Submit the form or show success message
       alert('Sign up successful!');
-      // Optionally, send form data to the server using AJAX or submit the form
-      // signupForm.submit();
     });
   });
   

@@ -476,7 +476,6 @@ function verifyVoteOnBlockchain(voterId) {
     setTimeout(() => {
         hideLoadingOverlay();
         
-        // Mock response - in a real app this would come from your blockchain API
         const isVerified = Math.random() > 0.2; // 80% chance of verification for demo
         
         if (isVerified) {
